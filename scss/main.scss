@@ -1,0 +1,178 @@
+$rounded: 'Varela Round', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$maincolor: #3A94ED;
+
+/*
+    Typography settings
+*/
+
+html {
+	font-size: 16px;
+	font-smoothing: antialiased;
+}
+
+h1 {
+	font-size: 1.7rem;
+	font-family: $rounded;
+	font-weight: regular;
+	line-height: 2rem;
+	color: $maincolor;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+p {
+	font-size: 1rem;
+	font-weight: 300;
+	color: #191818;
+	letter-spacing: -.03rem;
+	text-rendering: optimizeLegibility;
+}
+
+.button-text {
+	font-size: 1.2rem;
+}
+
+.additional_text {
+	font-size: .8rem;
+}
+
+section {
+	overflow: hidden;
+}
+
+.top {
+	height: 110vh;
+	margin-bottom: 1rem;
+}
+
+
+.top_nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2rem 0;
+
+	.logo {
+		width: 40%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.envelope {
+		width: 15%;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.claim {
+	margin-top: 1rem;
+}
+
+
+.claim, .bodytext {
+	text-align: center;
+}
+
+button {
+	display: block;
+	margin: 0 auto;
+	padding: .5rem 2rem;
+	border-radius: 100px;
+	border: 2px solid $maincolor;
+	color: $maincolor;
+	background: rgba(255,255,255,.8);
+}
+
+.arrows {
+	z-index: 1000;
+	position: absolute; 
+	top: 100vh;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 2rem;
+	height: auto;
+}
+
+
+.mockup_photo {
+	z-index: -1000;
+	position: absolute; 
+	top: 45%;
+	height: 40rem;
+	background: url('../assets/img/mockup.png') no-repeat;
+	background-size: 150% auto;
+
+}
+
+.benefits {
+	text-align: center;
+	margin-bottom: -5rem;
+
+	.benefit_element {
+		margin-top: 3rem;
+
+		img {
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+	}
+
+}
+
+.form {
+	height: 130vh;
+	background: url('../assets/img/background_bottom.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+
+	.mobile_form {
+		position: relative;
+		top: 50vh;
+
+		.mobile_form_header,
+		.mobile_form_text {
+			color: white;
+		}
+
+		input {
+			padding: 1rem .5rem .7rem .5rem;
+			background: none;
+			border: none;
+			border-bottom: 2px solid white;
+		}
+
+		input::placeholder {
+			text-align: center;
+			font-family: $rounded;
+			font-size: 1.4rem;
+			color: rgba(255,255,255, .5);
+		}
+
+		.mobile_button {
+			margin-top: 3rem;
+			background: none;
+			color: white;
+			border: 2px solid white;
+		}
+	}
+
+	.footer {
+		position: relative;
+		top: 70vh;
+
+		img {
+			width: 100%;
+			margin-bottom: 1rem;
+		} 
+
+	}
+	
+}
