@@ -1,0 +1,209 @@
+@media(min-width: 992px) {
+	
+	h1 {
+		font-size: 3rem;
+		line-height: 2.7rem;
+	}
+
+	p {
+		font-size: 1.35rem;
+		line-height: 1.8rem;
+		font-weight: 300;
+		letter-spacing: 0;
+	}
+
+
+	.top {
+	
+		.top_nav {
+			padding: 1rem;
+
+
+			.logo {
+				width: 13%; 
+			}
+
+			.envelope_wrapper {
+				width: 15%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+
+
+
+				.envelope_text {
+					color: $maincolor;
+					font-size: 1rem;
+					font-family: $rounded;
+					line-height: 1.1rem;
+					margin: 0 1rem;
+					display: inline;
+					z-index:2;
+				}
+				
+
+				.envelope {
+					width: 25%;
+					cursor: pointer;
+					
+					img {
+						width: 100%;
+					}
+					
+				}
+
+			}
+
+
+
+			
+
+		}	
+
+		.top_claim {
+			margin-top: 6rem;
+		}
+
+		.top_button {
+			button {
+				margin: 0;
+			}
+		}
+
+		.mockup_photo {
+			top: 20%;
+			background-size: 100% auto;
+		}
+	}
+
+	.claim, .bodytext {
+		text-align: left;
+	}
+
+	button {
+		margin: 0;
+	}
+
+// hide mobile benefits 
+	.benefits_mobile {
+		display: none;
+	}
+
+
+//show desktop benefits 
+	.benefits_desktop {
+		display: block;
+
+		.benefit_element_desktop {
+			margin-top: 6rem;
+		}
+		
+		.benefits_element_desktop_wrapper {
+			align-items: center;
+			
+			.icon {
+
+				img {
+					width: 60%;
+					float: right; 
+				}
+			}
+
+			.benefit_element_text {
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				p {
+					font-size: 1.25rem;
+				}
+			}
+			
+		}
+	}
+
+	.form {
+		.mobile_form {
+			display: none;
+		}
+
+		.desktop_form {
+			margin-top: 40rem;
+			display: block;
+
+
+			.whitelabel {
+				box-shadow: 0px 0px 10px rgba(0,0,0, .1);
+				padding: 4.5rem 1rem;
+				background: white;
+				z-index: 1;
+				border-radius: 10px;
+				position: relative; 
+				top: -30rem;
+
+
+				h1 {
+					font-size: 2.5rem;
+				}
+
+				p {
+					font-size: 1.25rem;
+				}
+
+				input {
+					z-index: 5;
+					padding: 1rem .5rem .7rem .5rem;
+					background: none;
+					border: none;
+					border-bottom: 2px solid $maincolor;
+					color: $maincolor;
+					font-size: 1.4rem;
+					text-align: center;
+				}
+
+				input::placeholder {
+					text-align: center;
+					font-family: $rounded;
+					font-size: 1.4rem;
+					color: $maincolor;
+					transition: all .5s;
+					position: relative;
+				}
+
+				button {
+					text-align: center;
+					margin: 2rem auto .5rem auto;
+					background: white;
+					border: 2px solid $maincolor;
+					color: $maincolor;
+				}
+
+				button:hover {
+					background: $maincolor;
+					color: white;
+				}
+
+				.promise {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.footer {
+			position: relative;
+			top: -25rem;
+			margin-bottom: -20rem;
+
+			img {
+				width: 50%;
+			}
+		}
+	}
+
+
+
+// end of media query
+}
+
+
+	

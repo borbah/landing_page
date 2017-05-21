@@ -1,4 +1,3 @@
-@import '720px';
 
 $rounded: 'Varela Round', sans-serif;
 $raleway: 'Raleway', sans-serif;
@@ -29,6 +28,21 @@ p {
 	color: #191818;
 	letter-spacing: -.03rem;
 	text-rendering: optimizeLegibility;
+}
+
+button {
+		display: block;
+		padding: .5rem 2rem;
+		border-radius: 100px;
+		cursor: pointer;
+	}
+
+input,button {
+	transition: .2s ease-out;
+}
+
+button:focus, a:focus, input:focus {
+	outline: 0;
 }
 
 .button-text {
@@ -63,13 +77,18 @@ section {
 		}
 	}
 
-	.envelope {
-		width: 15%;
+	.envelope_wrapper {
+		width: 10%;
+
+		.envelope_text {
+			display: none;
+		}
 
 		img {
 			width: 100%;
 		}
 	}
+
 }
 
 .claim {
@@ -79,20 +98,38 @@ section {
 
 .claim, .bodytext {
 	text-align: center;
+	z-index: 5;	
 }
 
-button {
-	display: block;
-	margin: 0 auto;
-	padding: .5rem 2rem;
-	border-radius: 100px;
-	border: 2px solid $maincolor;
-	color: $maincolor;
-	background: rgba(255,255,255,.8);
+.top_button {
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	button {
+		display: block;
+		margin: 0 auto;
+		padding: .5rem 2rem;
+		border-radius: 100px;
+		border: 2px solid $maincolor;
+		color: $maincolor;
+		background: rgba(255,255,255,.8);
+		cursor: pointer;
+		transition: .2s ease-out;
+	}
+
+	button:hover {
+		background: $maincolor;
+		color: white;
+		border: 2px solid white;
+	}
 }
+
+
 
 .arrows {
-	z-index: 1000;
+	z-index: 100;
 	position: absolute; 
 	top: 100vh;
 	left: 0;
@@ -104,7 +141,7 @@ button {
 
 
 .mockup_photo {
-	z-index: -1000;
+	z-index: 1;
 	position: absolute; 
 	top: 45%;
 	height: 40rem;
@@ -113,7 +150,7 @@ button {
 
 }
 
-.benefits {
+.benefits_mobile {
 	text-align: center;
 	margin-bottom: -5rem;
 
@@ -128,17 +165,21 @@ button {
 
 }
 
+.benefits_desktop {
+	display: none;
+}
+
 .form {
-	height: 130vh;
+	z-index: 1;
+	height: auto;
 	background: url('../assets/img/background_bottom.png') no-repeat;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
 
 	.mobile_form {
-		position: relative;
-		top: 50vh;
-
+		margin-top: 18rem;
+		margin-bottom: 8rem;
 		.mobile_form_header,
 		.mobile_form_text {
 			color: white;
@@ -166,6 +207,7 @@ button {
 		
 
 		.mobile_button {
+			margin: 0 auto;
 			margin-top: 3rem;
 			background: none;
 			color: white;
@@ -179,27 +221,29 @@ button {
 
 		}
 	}
-}
 
-footer { 
-	background: $maincolor;
+	.desktop_form {
+		display: none;
+	}
 
 	.footer {
-		position: relative;
-		top: -5vh;
-		text-align: center;
-
-		p {
-			color: white;
-			margin: 0 auto;
-		}
+		margin-bottom: 2rem;
 
 		img {
 			width: 100%;
 			margin-bottom: 1rem;
 		} 
+
+		p {
+			color: white;
+			margin: 0 0;
+			font-size: 1rem;
+		}
+	}
 }
 
-}
+@import '768px';
+@import '992px';
+
 
 

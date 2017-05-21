@@ -12,7 +12,8 @@ var gulp   = require('gulp'),
     cleanCSS = require('gulp-clean-css');
 
     jsSrc = 'js/**/*.js';
-    scssSrc = 'scss/**/*.scss';
+    scssSrc = 'scss/main.scss';
+    watchScss = 'scss/*.scss';
     cssPub = 'css';
 
 
@@ -49,6 +50,6 @@ gulp.task('watch', function() {
   gulp.watch("*.html").on('change', browserSync.reload);
 
   gulp.watch(jsSrc, ['jshint']);
-  gulp.watch(scssSrc, ['sass']);
+  gulp.watch(watchScss, ['sass']);
 
 });
