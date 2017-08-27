@@ -1,0 +1,23 @@
+@media(min-width: 500px) {
+	.top {
+		.top_nav {
+			.logo {
+				width: 20%;
+			}
+
+			.envelope_wrapper {
+				width: 8%;
+			}
+		}
+	}
+
+	.benefits_mobile {
+		.benefit_element {
+			.icon {
+				img {
+					width: 5rem;
+				}
+			}
+		}
+	}
+}

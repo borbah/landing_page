@@ -1,0 +1,42 @@
+@media(min-width: 1700px) {
+	
+	.top {
+
+		.mockup_photo {
+			top: 15%;
+			height: 100vh;
+			background: url('../assets/img/mockup.png') no-repeat;
+			background-size: 100% auto;
+		}
+	}
+
+
+	.icon img {
+		width: 40% !important;
+	}
+
+
+	.form {
+		background-size: 120% auto;
+		background-position: left;
+
+		.desktop_form {
+			margin-top: 50rem;
+
+			.whitelabel {
+				padding: 7rem 1rem;
+				top: -40rem;
+			}
+		}
+
+		.footer {
+			img {
+				width: 30%;
+			}
+		}
+
+	}
+
+
+
+}

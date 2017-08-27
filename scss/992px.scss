@@ -2,12 +2,12 @@
 	
 	h1 {
 		font-size: 3rem;
-		line-height: 2.7rem;
+		line-height: 3.7rem;
 	}
 
 	p {
 		font-size: 1.35rem;
-		line-height: 1.8rem;
+		line-height: 2rem;
 		font-weight: 300;
 		letter-spacing: 0;
 	}
@@ -16,7 +16,7 @@
 	.top {
 	
 		.top_nav {
-			padding: 1rem;
+			padding: 2rem 2rem;
 
 
 			.logo {
@@ -24,7 +24,7 @@
 			}
 
 			.envelope_wrapper {
-				width: 15%;
+				width: 25%;
 				display: flex;
 				justify-content: flex-end;
 				align-items: center;
@@ -33,17 +33,17 @@
 
 				.envelope_text {
 					color: $maincolor;
-					font-size: 1rem;
+					font-size: .85rem;
 					font-family: $rounded;
-					line-height: 1.1rem;
-					margin: 0 1rem;
+					line-height: 1rem;
+					margin: 0 .7rem;
 					display: inline;
 					z-index:2;
 				}
 				
 
 				.envelope {
-					width: 25%;
+					width: 18%;
 					cursor: pointer;
 					
 					img {
@@ -71,8 +71,10 @@
 		}
 
 		.mockup_photo {
-			top: 20%;
-			background-size: 100% auto;
+			transform: translateX(100vw);
+			animation: slideIn 2s ease-in-out .5s 1 normal forwards;
+			top: 30vh;
+			background-size: 90% auto;
 		}
 	}
 
@@ -94,6 +96,10 @@
 	.benefits_desktop {
 		display: block;
 
+		.description {
+			text-align: center;
+		}
+
 		.benefit_element_desktop {
 			margin-top: 6rem;
 		}
@@ -104,7 +110,7 @@
 			.icon {
 
 				img {
-					width: 60%;
+					width: 7rem;
 					float: right; 
 				}
 			}
@@ -123,56 +129,52 @@
 	}
 
 	.form {
-		.mobile_form {
-			display: none;
-		}
 
 		.desktop_form {
 			margin-top: 40rem;
+			margin-bottom: 5rem;
 			display: block;
 
 
 			.whitelabel {
+				width: 38em;
+				margin: 0 auto;
 				box-shadow: 0px 0px 10px rgba(0,0,0, .1);
-				padding: 4.5rem 1rem;
 				background: white;
-				z-index: 1;
-				border-radius: 10px;
-				position: relative; 
 				top: -30rem;
 
 
 				h1 {
 					font-size: 2.5rem;
+					color: $maincolor;
 				}
 
 				p {
 					font-size: 1.25rem;
+					color: $maincolor;
 				}
 
 				input {
-					z-index: 5;
-					padding: 1rem .5rem .7rem .5rem;
-					background: none;
-					border: none;
 					border-bottom: 2px solid $maincolor;
 					color: $maincolor;
-					font-size: 1.4rem;
-					text-align: center;
 				}
 
 				input::placeholder {
-					text-align: center;
-					font-family: $rounded;
-					font-size: 1.4rem;
 					color: $maincolor;
-					transition: all .5s;
-					position: relative;
+				}
+
+
+				.formcheck {
+					padding: 1rem;
+					
+					.form_validation_good {
+						color: $maincolor;
+						font-weight: 600;
+					}
+					
 				}
 
 				button {
-					text-align: center;
-					margin: 2rem auto .5rem auto;
 					background: white;
 					border: 2px solid $maincolor;
 					color: $maincolor;
@@ -183,9 +185,6 @@
 					color: white;
 				}
 
-				.promise {
-					font-size: 1rem;
-				}
 			}
 		}
 

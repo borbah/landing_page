@@ -1,3 +1,4 @@
+@import 'keyframes';
 
 $rounded: 'Varela Round', sans-serif;
 $raleway: 'Raleway', sans-serif;
@@ -12,6 +13,14 @@ html {
 	font-smoothing: antialiased;
 }
 
+body {
+	background: #FBFBFB;
+}
+
+.hidden {
+	display: none;
+}
+
 h1 {
 	font-size: 1.7rem;
 	font-family: $rounded;
@@ -23,12 +32,18 @@ h1 {
 }
 
 p {
+	font-family: $raleway;
 	font-size: 1rem;
 	font-weight: 300;
 	color: #191818;
 	letter-spacing: -.03rem;
 	text-rendering: optimizeLegibility;
 }
+
+span {
+	font-weight: 400;
+}
+
 
 button {
 		display: block;
@@ -58,7 +73,7 @@ section {
 }
 
 .top {
-	height: 110vh;
+	height: 100vh;
 	margin-bottom: 1rem;
 }
 
@@ -129,22 +144,21 @@ section {
 
 
 .arrows {
-	z-index: 100;
+	cursor: pointer;
 	position: absolute; 
-	top: 100vh;
+	bottom: 1rem;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
 	width: 2rem;
-	height: auto;
 }
 
 
 .mockup_photo {
-	z-index: 1;
+	z-index: -1;
 	position: absolute; 
 	top: 45%;
-	height: 40rem;
+	height: 100vh;
 	background: url('../assets/img/mockup.png') no-repeat;
 	background-size: 150% auto;
 
@@ -154,12 +168,16 @@ section {
 	text-align: center;
 	margin-bottom: -5rem;
 
+	.description {
+		text-align: center;
+	}
+
 	.benefit_element {
 		margin-top: 3rem;
 
 		img {
 			margin-bottom: 1rem;
-			width: 100%;
+			width: 5rem;
 		}
 	}
 
@@ -176,55 +194,93 @@ section {
 	background-size: cover;
 	background-position: center;
 	text-align: center;
-
-	.mobile_form {
-		margin-top: 18rem;
-		margin-bottom: 8rem;
-		.mobile_form_header,
-		.mobile_form_text {
-			color: white;
-		}
-
-		input {
-			padding: 1rem .5rem .7rem .5rem;
-			background: none;
-			border: none;
-			border-bottom: 2px solid white;
-			color: white;
-			font-size: 1.4rem;
-			text-align: center;
-		}
-
-		input::placeholder {
-			text-align: center;
-			font-family: $rounded;
-			font-size: 1.4rem;
-			color: rgba(255,255,255, .5);
-			transition: all .5s;
-			position: relative;
-		}
-
-		
-
-		.mobile_button {
-			margin: 0 auto;
-			margin-top: 3rem;
-			background: none;
-			color: white;
-			border: 2px solid white;
-		}
-
-		.promise {
-			color: white;
-			display: block;
-			margin: 1rem auto 0 auto;
-
-		}
-	}
-
+	transition: all .3s;
+	
 	.desktop_form {
-		display: none;
-	}
+			margin-top: 40rem;
+			margin-bottom: -15rem;
+			display: block;
+
+
+			.whitelabel {
+				width: 100vw;
+				padding: 4.5rem 1rem;
+				z-index: 1;
+				border-radius: 10px;
+				position: relative; 
+				top: -20rem;
+
+				h1 {
+					font-size: 2.5rem;
+					color: white;
+					line-height: 3rem;
+				}
+
+				p {
+					font-size: 1.25rem;
+					color: white;
+				}
+
+				input {
+					z-index: 5;
+					padding: 1rem .5rem .7rem .5rem;
+					background: none;
+					border: none;
+					border-bottom: 2px solid white;
+					color: white;
+					font-size: 1.4rem;
+					text-align: center;
+				}
+
+				input::placeholder {
+					text-align: center;
+					font-family: $rounded;
+					font-size: 1.4rem;
+					color: white;
+					transition: all .5s;
+					position: relative;
+					transition: .3s;
+				}
+
+				input:focus::placeholder {
+					opacity: 0;
+				}
+
+				.formcheck {
+					padding: 1rem;
+					
+					.form_validation_good {
+						font-size: 1rem;
+						color: white;
+						font-weight: 600;
+						margin: 0;
+						line-height: 1rem;
+					}
+					
+				}
+
+				
+
+
+				button {
+					text-align: center;
+					margin: .5rem auto 2rem auto;
+					background: none;
+					border: 2px solid white;
+					color: white;
+				}
+
+				button:hover {
+					background: $maincolor;
+					color: white;
+				}
+
+				.promise {
+					font-size: .9rem;
+					line-height: 1.1rem;
+				}
+			}
+		}
 
 	.footer {
 		margin-bottom: 2rem;
@@ -234,7 +290,11 @@ section {
 			margin-bottom: 1rem;
 		} 
 
-		p {
+		a {
+			display: block;
+			text-decoration: none;
+			font-family: $raleway;
+			font-weight: 300;
 			color: white;
 			margin: 0 0;
 			font-size: 1rem;
@@ -242,8 +302,11 @@ section {
 	}
 }
 
+@import '500px';
 @import '768px';
 @import '992px';
+@import '1450px';
+@import '1700px';
 
 
 
